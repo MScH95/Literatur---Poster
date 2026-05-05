@@ -27,7 +27,6 @@
       min-height: 100vh;
     }
 
-    /* Header */
     header {
       background: var(--green-dark);
       padding: 2.5rem 2rem 2rem;
@@ -54,7 +53,6 @@
     }
 
     .header-label {
-      font-family: 'Source Sans 3', sans-serif;
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.18em;
@@ -79,30 +77,13 @@
       font-weight: 300;
     }
 
-    /* Poster info bar */
-    .info-bar {
-      background: var(--green-mid);
-      padding: 0.75rem 2rem;
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.75);
-      font-weight: 300;
-      letter-spacing: 0.02em;
-    }
-
-    /* Main content */
     main {
       max-width: 720px;
       margin: 0 auto;
       padding: 2rem 1.5rem 4rem;
     }
 
-    /* Section */
-    .section {
-      margin-bottom: 2.5rem;
-    }
-
     .section-title {
-      font-family: 'Source Sans 3', sans-serif;
       font-size: 0.65rem;
       font-weight: 600;
       letter-spacing: 0.16em;
@@ -113,7 +94,6 @@
       border-bottom: 1.5px solid var(--green-light);
     }
 
-    /* Reference cards */
     .ref-list {
       display: flex;
       flex-direction: column;
@@ -137,26 +117,22 @@
     .ref-text {
       font-family: 'Source Serif 4', serif;
       font-size: 0.88rem;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--gray-dark);
     }
 
-    .ref-text em {
-      font-style: italic;
+    .ref-text em { font-style: italic; }
+
+    .ref-text a {
+      color: var(--green-mid);
+      text-decoration: none;
+      word-break: break-all;
     }
 
-    /* Placeholder style */
-    .ref-placeholder {
-      border-left-color: var(--gray-border);
-      background: #F7F7F5;
+    .ref-text a:hover {
+      text-decoration: underline;
     }
 
-    .ref-placeholder .ref-text {
-      color: var(--gray-mid);
-      font-style: italic;
-    }
-
-    /* Footer */
     footer {
       background: var(--green-dark);
       text-align: center;
@@ -166,60 +142,135 @@
       letter-spacing: 0.04em;
     }
 
-    footer span {
-      color: var(--green-accent);
-    }
+    footer span { color: var(--green-accent); }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="header-label">Universität Salzburg</div>
     <h1>Literaturverzeichnis</h1>
-    <div class="header-sub">Poster-Präsentation · Fachbereich Erziehungswissenschaften</div>
+    <div class="header-sub">Magdalena Schobersberger · Poster-Präsentation</div>
   </header>
 
-  <div class="info-bar">
-    Alle Quellen sind alphabetisch nach Erstautor sortiert · APA 7th Edition
-  </div>
-
   <main>
-
-    <!-- ABSCHNITT 1 -->
-    <div class="section">
+    <div style="margin-bottom: 2.5rem;">
       <div class="section-title">Quellen</div>
       <div class="ref-list">
 
-        <!-- Hier deine Quellen einfügen – einfach weitere <div class="ref-card"> Blöcke kopieren -->
-
-        <div class="ref-card ref-placeholder">
-          <p class="ref-text">Hier erste Quelle einfügen (z. B. Autor, A. A. (Jahr). <em>Titel des Werkes.</em> Verlag.)</p>
-        </div>
-
-        <div class="ref-card ref-placeholder">
-          <p class="ref-text">Hier zweite Quelle einfügen</p>
-        </div>
-
-        <div class="ref-card ref-placeholder">
-          <p class="ref-text">Hier dritte Quelle einfügen</p>
-        </div>
-
-        <!-- Beispiel wie eine echte Quelle aussieht: -->
-        <!--
         <div class="ref-card">
-          <p class="ref-text">
-            Mustermann, M., & Musterfrau, A. (2023). <em>Emotionen im Schulkontext.</em> Springer.
-          </p>
+          <p class="ref-text">Berry, J. W. (1997). Immigration, Acculturation, and Adaptation. <em>Applied Psychology, 46</em>(1), 5–34. <a href="https://doi.org/10.1111/j.1464-0597.1997.tb01087.x">https://doi.org/10.1111/j.1464-0597.1997.tb01087.x</a></p>
         </div>
-        -->
+
+        <div class="ref-card">
+          <p class="ref-text">Berry, J. W., Phinney, J. S., Sam, D. L., &amp; Vedder, P. (2006). Immigrant Youth: Acculturation, Identity, and Adaptation. <em>Applied Psychology, 55</em>(3), 303–332. <a href="https://doi.org/10.1111/j.1464-0597.2006.00256.x">https://doi.org/10.1111/j.1464-0597.2006.00256.x</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Berry, J. W., Phinney, J. S., Sam, D. L., &amp; Vedder, P. (2023). <em>Immigrant Youth in Cultural Transition. Acculturation, Identity and Adaptation Across National Contexts.</em> Routledge.</p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Bieleke, M., Gogol, K., Goetz, T., Daniels, L., &amp; Pekrun, R. (2021). The AEQ-S: A short version of the Achievement Emotions Questionnaire. <em>Contemporary Educational Psychology, 65.</em> <a href="https://doi.org/10.1016/j.cedpsych.2020.101940">https://doi.org/10.1016/j.cedpsych.2020.101940</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Breyer, B., &amp; Bluemke, M. (2016). Deutsche Version der Positive und Negative Affect Schedule PANAS (Gesis Panel). <em>Zusammenstellung sozialwissenschaftlicher Items und Skalen.</em> <a href="https://doi.org/10.6102/zis242">https://doi.org/10.6102/zis242</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Bundesministerium für Bildung, Wissenschaft und Forschung. (2024). <em>Nationaler Bildungsbericht Österreich 2024.</em></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Eccles, J. S., &amp; Wigfield, A. (2020). From expectancy-value theory to situated expectancy-value theory: A developmental, social cognitive, and sociocultural perspective on motivation. <em>Contemporary Educational Psychology, 61.</em> <a href="https://doi.org/10.1016/j.cedpsych.2020.101859">https://doi.org/10.1016/j.cedpsych.2020.101859</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Frenzel, A. C., Götz, T., &amp; Pekrun, R. (2009). Emotionen. In E. Wild &amp; J. Möller (Hrsg.), <em>Pädagogische Psychologie</em> (S. 205–231). Springer. <a href="https://doi.org/10.1007/978-3-540-88573-3_9">https://doi.org/10.1007/978-3-540-88573-3_9</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Frenzel, A. C., &amp; Stephens, E. J. (2017). Emotionen. In T. Götz (Hrsg.), <em>Emotion, Motivation und selbstreguliertes Lernen.</em> Ferdinand Schöningh.</p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Gaspard, H., Parrisius, C., Piesch, H., Kleinhansl, M., Wille, E., Nagengast, B., Trautwein, U., &amp; Hulleman, C. S. (2021). The potential of relevance interventions for scaling up: A cluster-randomized trial testing the effectiveness of a relevance intervention in math classrooms. <em>Journal of Educational Psychology, 113</em>(8), 1507–1528. <a href="https://doi.org/10.1037/edu0000663">https://doi.org/10.1037/edu0000663</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Goetz, T., Frenzel, A. C., Stockinger, K., Lipnevich, A. A., Stempfer, L., &amp; Pekrun, R. (2023). Emotions in education. In <em>International Encyclopedia of Education</em> (4th ed., S. 149–161). <a href="https://doi.org/10.1016/b978-0-12-818630-5.14032-1">https://doi.org/10.1016/b978-0-12-818630-5.14032-1</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Götz, T. (Hrsg.). (2017). <em>Emotion, Motivation und selbstreguliertes Lernen.</em> Ferdinand Schöningh.</p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Hagenauer, G., &amp; Hascher, T. (2011). Schulische Lernfreude in der Sekundarstufe 1 und deren Beziehung zu Kontroll- und Valenzkognitionen. <em>Zeitschrift für Pädagogische Psychologie, 25</em>(1), 63–80. <a href="https://doi.org/10.1024/1010-0652/a000026">https://doi.org/10.1024/1010-0652/a000026</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Kunter, M., Schümer, G., Artelt, C., Baumert, J., Klieme, E., Neubrand, M., Prenzel, M., Schiefele, U., Schneider, U., Stanat, P., Tillmann, K.-J., &amp; Weiß, M. (2002). <em>PISA 2000: Dokumentation der Erhebungsinstrumente.</em> Max-Planck-Institut für Bildungsforschung.</p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Leung, K. C., Marsh, H. W., Craven, R. G., &amp; Abduljabbar, A. S. (2015). Measurement Invariance of the Self-Description Questionnaire II in a Chinese Sample. <em>European Journal of Psychological Assessment, 32</em>(2), 128–139. <a href="https://doi.org/10.1027/1015-5759/a000242">https://doi.org/10.1027/1015-5759/a000242</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Lilla, N. (2023). Capturing the multidimensionality of immigrant students' acculturation patterns in Germany. <em>Frontiers in Education, 8.</em> <a href="https://doi.org/10.3389/feduc.2023.1129407">https://doi.org/10.3389/feduc.2023.1129407</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Makarova, E. (2008). <em>Akkulturation und kulturelle Identität: eine empirische Studie unter Jugendlichen mit und ohne Migrationshintergrund in der Schweiz.</em> Haupt.</p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Makarova, E., &amp; Birman, D. (2015). Cultural transition and academic achievement of students from ethnic minority backgrounds: a content analysis of empirical research on acculturation. <em>Educational Research, 57</em>(3), 305–330. <a href="https://doi.org/10.1080/00131881.2015.1058099">https://doi.org/10.1080/00131881.2015.1058099</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Meyer, S., &amp; Gläser-Zikuda, M. (2020). Zur Bedeutung individueller und kontextueller Einflussfaktoren auf Lern- und Leistungsemotionen zu Beginn der Sekundarstufe – eine mehrebenenanalytische Betrachtung. <em>Zeitschrift für Bildungsforschung, 10</em>(1), 81–102. <a href="https://doi.org/10.1007/s35834-019-00258-y">https://doi.org/10.1007/s35834-019-00258-y</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Meyer, S., Schlesier, J., &amp; Gläser-Zikuda, M. (2024). Beeinflussen individuelle und schulische Prädiktoren das Erleben der Emotionen Freude und Langeweile von Schüler:innen nach dem Übergang in die Sekundarschule? <em>Zeitschrift für Erziehungswissenschaft, 28</em>(2), 441–465. <a href="https://doi.org/10.1007/s11618-024-01281-0">https://doi.org/10.1007/s11618-024-01281-0</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Pekrun, R., Goetz, T., Titz, W., &amp; Perry, R. P. (2002). Academic Emotions in Students' Self-Regulated Learning and Achievement: A Program of Quantitative and Qualitative Research. <em>Educational Psychologist, 37</em>(2), 91–106. <a href="https://doi.org/10.1207/S15326985EP3702_4">https://doi.org/10.1207/S15326985EP3702_4</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Pekrun, R. (2006). The Control-Value Theory of Achievement Emotions: Assumptions, Corollaries, and Implications for Educational Research and Practice. <em>Educational Psychology Review, 18</em>(4), 315–341. <a href="https://doi.org/10.1007/s10648-006-9029-9">https://doi.org/10.1007/s10648-006-9029-9</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Pekrun, R., Frenzel, A. C., Goetz, T., &amp; Perry, R. P. (2007). The Control-Value Theory of Achievement Emotions: An Integrative Approach to Emotions in Education. In P. A. Schutz &amp; R. Pekrun (Hrsg.), <em>Emotion in Education</em> (S. 13–36). Academic Press. <a href="https://doi.org/10.1016/B978-012372545-5/50003-4">https://doi.org/10.1016/B978-012372545-5/50003-4</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Pekrun, R., Marsh, H. W., Elliot, A. J., Stockinger, K., Perry, R. P., Vogl, E., Goetz, T., van Tilburg, W. A. P., Ludtke, O., &amp; Vispoel, W. P. (2023). A three-dimensional taxonomy of achievement emotions. <em>Journal of Personality and Social Psychology, 124</em>(1), 145–178. <a href="https://doi.org/10.1037/pspp0000448">https://doi.org/10.1037/pspp0000448</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Sidler, P., Kassis, W., Makarova, E., &amp; Janousch, C. (2021). Assessing attitudes towards mutual acculturation in multicultural schools: Conceptualisation and validation of a four-dimensional mutual acculturation attitudes scale. <em>International Journal of Intercultural Relations, 84,</em> 300–314. <a href="https://doi.org/10.1016/j.ijintrel.2021.08.009">https://doi.org/10.1016/j.ijintrel.2021.08.009</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Sidler, P., Baysu, G., Kassis, W., Janousch, C., Chouvati, R., Govaris, C., Graf, U., &amp; Rietz, C. (2022). Minority and Majority Adolescents' Attitudes toward Mutual Acculturation and its Association with Psychological Adjustment. <em>Journal of Youth and Adolescence, 51</em>(8), 1511–1535. <a href="https://doi.org/10.1007/s10964-022-01604-6">https://doi.org/10.1007/s10964-022-01604-6</a></p>
+        </div>
+
+        <div class="ref-card">
+          <p class="ref-text">Statistik Austria. (2025). <em>Bildung in Zahlen 2023/24. Schlüsselindikatoren und Analysen.</em> Statistik Austria.</p>
+        </div>
 
       </div>
     </div>
-
   </main>
 
   <footer>
-    <span>Universität Salzburg</span> · Fachbereich Erziehungswissenschaften
+    <span>Magdalena Schobersberger</span> · Universität Salzburg
   </footer>
 
 </body>
